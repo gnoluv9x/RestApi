@@ -1,14 +1,22 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const dataSchema = new mongoose.Schema({
-    name: {
-        required: true,
-        type: String
-    },
-    age: {
-        required: true,
-        type: Number
-    }
-})
+const postSchema = new mongoose.Schema({
+  id: {
+    required: true,
+    type: String,
+  },
+  title: {
+    required: true,
+    type: String,
+  },
+  content: {
+    required: true,
+    type: String,
+  },
+  createdAt: {
+    required: true,
+    type: String,
+  },
+});
 
-module.exports = mongoose.model('Data', dataSchema)
+module.exports = mongoose.model("posts", postSchema);
